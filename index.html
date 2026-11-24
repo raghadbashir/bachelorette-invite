@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>You're Invited — A Bachelorette Celebration</title>
+<meta name="description" content="Tap to open your invitation to an evening of glamour and celebration.">
+<meta name="theme-color" content="#0b0907">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="You're Invited — A Bachelorette Celebration">
+<meta property="og:description" content="Tap to open your invitation ✨">
+<meta property="og:image" content="https://raghadbashir.github.io/bachelorette-invite/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://raghadbashir.github.io/bachelorette-invite/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="You're Invited — A Bachelorette Celebration">
+<meta name="twitter:description" content="Tap to open your invitation ✨">
+<meta name="twitter:image" content="https://raghadbashir.github.io/bachelorette-invite/assets/og-image.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f3dc96'/%3E%3Cstop offset='1' stop-color='%23a37a32'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='32' cy='32' r='30' fill='%230b0907' stroke='url(%23g)' stroke-width='3'/%3E%3Cpath d='M32 12l4 16 16 4-16 4-4 16-4-16-16-4 16-4z' fill='url(%23g)'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="backdrop cheetah" aria-hidden="true"></div>
+
+<main class="stage" id="stage" aria-label="Bachelorette invitation">
+
+  <!-- 0 · Opening -->
+  <section class="scene s-open" id="sOpen" aria-hidden="true">
+    <div class="half top"></div><div class="half bot"></div>
+    <div class="open-line"></div>
+    <div class="spark-glow"></div>
+    <svg class="spark" viewBox="-50 -50 100 100"><path d="M0-48C3-14 14-3 48 0 14 3 3 14 0 48-3 14-14 3-48 0-14-3-3-14 0-48Z" fill="url(#goldGrad)"/></svg>
+  </section>
+
+  <!-- 1 · Envelope -->
+  <section class="scene s-env" id="sEnv" aria-hidden="true">
+    <div class="cheetah kb" id="envBg"></div>
+    <div class="shade"></div>
+    <div class="env" id="env">
+      <div class="env-back" id="envBack"><div class="liner cheetah"></div></div>
+      <div class="mini-card" id="miniCard">
+        <div class="mini-frame">
+          <span class="mini-mono foil" data-c="bride.monogram">B</span>
+          <span class="mini-text" data-c="text.invited">You're invited</span>
+        </div>
+      </div>
+      <div class="env-front" id="envFront"></div>
+      <svg class="env-lines" id="envLines" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 100 50 52 100 100M0 0 50 56 100 0" vector-effect="non-scaling-stroke"/></svg>
+      <div class="flap" id="flap">
+        <div class="flap-face flap-out"></div>
+        <div class="flap-face flap-in cheetah"></div>
+      </div>
+      <div class="seal" id="seal">
+        <div class="seal-half l"><div class="seal-disc"><span data-c="bride.monogram">B</span></div></div>
+        <div class="seal-half r"><div class="seal-disc"><span data-c="bride.monogram">B</span></div></div>
+        <svg class="crack" viewBox="0 0 100 100"><path d="M48 2 54 22 45 38 56 55 46 72 53 98"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · You're invited -->
+  <section class="scene s-invite paper" id="sInvite" aria-hidden="true">
+    <div class="frame"></div>
+    <div class="center">
+      <span class="rule r-top"></span>
+      <h1 class="invite-title" id="inviteTitle" data-c="text.invited">You're invited</h1>
+      <p class="invite-sub" id="inviteSub" data-c="text.invitedSub">to the bachelorette of</p>
+      <span class="rule r-bot"></span>
+    </div>
+  </section>
+
+  <!-- 3 · Bride's name -->
+  <section class="scene s-name" id="sName" aria-hidden="true">
+    <div class="glow-bg"></div>
+    <div class="center">
+      <p class="kicker" id="nameKicker" data-c="text.nameKicker">The Bachelorette</p>
+      <div class="write-wrap">
+        <div class="write" id="write"><div class="write-in" id="writeIn"><span class="script foil name-text" id="nameText" data-c="bride.name">Bride's Name</span></div></div>
+        <div class="nib-track" id="nibTrack"><span class="nib"></span></div>
+      </div>
+      <span class="rule small" id="nameRule"></span>
+      <p class="name-sub" id="nameSub" data-c="text.nameSub">Bride-to-be</p>
+    </div>
+  </section>
+
+  <!-- 4 · Baby photo -->
+  <section class="scene s-photo" id="sPhoto" aria-hidden="true">
+    <div class="cheetah kb" id="photoBg"></div>
+    <div class="shade dark"></div>
+    <div class="polaroid" id="polaroid">
+      <div class="photo">
+        <div class="ph" id="ph"><span class="ph-mono foil" data-c="bride.monogram">B</span><span class="ph-text" data-c="text.photoPlaceholder">Photo coming soon</span></div>
+        <img id="babyImg" alt="" decoding="async">
+        <div class="dev warm" id="devWarm"></div>
+        <div class="dev white" id="devWhite"></div>
+      </div>
+      <p class="caption" id="caption" data-c="text.photoCaption">Then</p>
+    </div>
+    <p class="photo-sub" id="photoSub" data-c="text.photoSub">Little her, all grown up</p>
+  </section>
+
+  <!-- 5 · Date -->
+  <section class="scene s-date" id="sDate" aria-hidden="true">
+    <div class="lines"><i class="ln t"></i><i class="ln b"></i><i class="ln l"></i><i class="ln r"></i></div>
+    <div class="center">
+      <p class="kicker" id="dateKicker" data-c="text.dateKicker">Save the date</p>
+      <p class="weekday" id="weekday" data-c="date.weekday">Weekday</p>
+      <div class="day foil-digits" id="day"></div>
+      <p class="month" id="month" data-c="date.month">Month</p>
+      <div class="year" id="year"></div>
+    </div>
+  </section>
+
+  <!-- 6 · Time & place -->
+  <section class="scene s-place" id="sPlace" aria-hidden="true">
+    <div class="mask" id="placeMask"><div class="mask-in paper" id="placeInner">
+      <div class="frame"></div>
+      <div class="center">
+        <p class="kicker dark" id="placeKicker" data-c="text.placeKicker">Join us</p>
+        <h2 class="place-title" id="placeTitle" data-c="text.placeTitle">Time &amp; Place</h2>
+        <span class="rule" id="placeRule"></span>
+        <ul class="details">
+          <li><svg class="ico" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M16 9v7l5 3"/></svg>
+            <div class="lm"><div class="li"><small data-c="text.timeLabel">Time</small><span data-c="time">0:00 PM</span></div></div></li>
+          <li><svg class="ico" viewBox="0 0 32 32"><path d="M5 27h22M7 27V14M25 27V14M4 14h24L16 5 4 14ZM12 27v-8h8v8"/></svg>
+            <div class="lm"><div class="li"><small data-c="text.venueLabel">Venue</small><span data-c="venue">Venue Name</span></div></div></li>
+          <li><svg class="ico" viewBox="0 0 32 32"><path d="M16 29s-9-8.6-9-15a9 9 0 0 1 18 0c0 6.4-9 15-9 15Z"/><circle cx="16" cy="14" r="3.2"/></svg>
+            <div class="lm"><div class="li"><small data-c="text.addressLabel">Address</small><span data-c="address">Street Address, City</span></div></div></li>
+        </ul>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- 7 · Dress code -->
+  <section class="scene s-dress" id="sDress" aria-hidden="true">
+    <div class="glow-bg"></div>
+    <div class="center">
+      <p class="kicker" id="dressKicker" data-c="text.dressKicker">Please wear</p>
+      <h2 class="dress-title foil" id="dressTitle" data-c="text.dressTitle">Dress Code</h2>
+      <div class="swatches" id="swatches"></div>
+      <p class="dress-note" id="dressNote" data-c="dressCode.note">Dress code note goes here</p>
+    </div>
+  </section>
+
+  <!-- 8 · Final -->
+  <section class="scene s-final" id="sFinal" aria-label="Invitation details">
+    <div class="cheetah kb" id="finalBg"></div>
+    <div class="shade soft"></div>
+    <div class="final-scroll">
+      <article class="card paper" id="finalCard">
+        <div class="frame"></div>
+        <p class="kicker dark fc" data-c="text.finalKicker">The Bachelorette</p>
+        <p class="f-invite fc" data-c="text.finalInvite">Join us in celebrating</p>
+        <p class="f-name script foil fc" id="finalName" data-c="bride.name">Bride's Name</p>
+        <div class="f-div fc"><span></span><i></i><span></span></div>
+        <p class="f-date fc"><span data-c="date.weekday">Weekday</span> · <span data-c="date.display">00 Month 2026</span></p>
+        <p class="f-time fc" data-c="time">0:00 PM</p>
+        <p class="f-venue fc" data-c="venue">Venue Name</p>
+        <p class="f-addr fc" data-c="address">Street Address, City</p>
+        <p class="f-dress fc"><span data-c="text.dressTitle">Dress Code</span>: <em data-c="dressCode.note">note</em></p>
+        <div class="countdown fc" id="countdown" aria-live="off">
+          <div><b id="cdD">00</b><small>Days</small></div>
+          <div><b id="cdH">00</b><small>Hours</small></div>
+          <div><b id="cdM">00</b><small>Mins</small></div>
+          <div><b id="cdS">00</b><small>Secs</small></div>
+        </div>
+        <p class="cd-done fc" id="cdDone" hidden></p>
+        <div class="actions fc">
+          <a class="btn primary wide" id="btnRsvp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/><path d="M8.8 8.6c.3 2.6 2.6 5.3 5.6 6.1l1.2-1.3-1.7-1-1 .8c-1-.5-2-1.5-2.4-2.4l.8-1-1-1.7-1.5.5Z"/></svg><span data-c="text.rsvp">RSVP on WhatsApp</span></a>
+          <div class="cal-wrap">
+            <button class="btn" id="btnCal" type="button" aria-expanded="false"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span data-c="text.calendar">Add to calendar</span></button>
+            <div class="cal-menu" id="calMenu" hidden>
+              <a id="calGoogle" target="_blank" rel="noopener" data-c="text.calendarGoogle">Google Calendar</a>
+              <a id="calIcs" download="invitation.ics" data-c="text.calendarApple">Apple / Outlook (.ics)</a>
+            </div>
+          </div>
+          <a class="btn" id="btnMap" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 21.5s-6.5-6.2-6.5-11a6.5 6.5 0 0 1 13 0c0 4.8-6.5 11-6.5 11Z"/><circle cx="12" cy="10.5" r="2.3"/></svg><span data-c="text.map">Open map</span></a>
+          <button class="btn ghost wide" id="btnReplay" type="button"><svg viewBox="0 0 24 24"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3M4.5 4v4.5H9"/></svg><span data-c="text.replay">Replay</span></button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- transition layers -->
+  <div class="wipe cheetah" id="wipe" aria-hidden="true"><i></i></div>
+  <div class="sweep" id="sweep" aria-hidden="true"></div>
+  <div class="flash" id="flash" aria-hidden="true"></div>
+
+  <!-- film texture -->
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- player chrome -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="controls">
+    <button class="ctl" id="btnMute" type="button" aria-label="Mute music" hidden>
+      <svg class="on" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg>
+      <svg class="off" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="m16 9.5 5 5m0-5-5 5"/></svg>
+    </button>
+    <button class="ctl skip" id="btnSkip" type="button" data-c="text.skip">Skip</button>
+  </div>
+  <div class="paused-ind" aria-hidden="true"><i></i><i></i></div>
+
+  <!-- tap to open -->
+  <div class="gate" id="gate" role="button" tabindex="0" aria-label="Tap to open the invitation">
+    <div class="cheetah gate-bg"></div>
+    <div class="gate-inner">
+      <div class="seal-disc big"><span data-c="bride.monogram">B</span></div>
+      <p class="kicker" data-c="text.tapKicker">A little film for you</p>
+      <p class="gate-cta" data-c="text.tapToOpen">Tap to open</p>
+      <p class="gate-hint" data-c="text.tapHint">Tap right to skip ahead · left to go back · hold to pause</p>
+    </div>
+  </div>
+</main>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbeab0"/><stop offset=".45" stop-color="#d4ad5c"/><stop offset="1" stop-color="#8a6526"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<script src="config.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
